@@ -56,9 +56,9 @@ API获取路径:主页-连接-新链接-访问令牌
 - 短期不推荐适配，使用Edge/Chrome更省事
 
 ## 三、移动端浏览器
-手机Chrome、Safari、Edge移动端**均不支持本地加载扩展**，USelfMark只能在电脑端桌面浏览器使用。
+手机Chrome、Safari、Edge移动端**均不支持本地加载扩展**，USelfMark暂时只能在电脑端桌面浏览器使用。
 
-## 四、补充到安装教程的兼容提示（复制到你的MD文档）
+## 四、补充到安装教程的兼容提示
 > ⚙️ 浏览器兼容说明
 > 1. 推荐：Chrome / Microsoft Edge（Windows & Mac 完美适配，开箱即用）
 > 2. 兼容：Brave、Opera、360极速、QQ浏览器极速模式，安装流程和Chrome完全相同
