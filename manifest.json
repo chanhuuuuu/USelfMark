@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "USelfMark",
   "version": "1.0",
-  "description": "USelfMark｜本地Ollama多模态网页剪藏，图文智能归档Notion，兼容Windows/Mac",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "description": "USelfMark｜本地Ollama多模态网页剪藏，图文智能归档Notion",
+  "permissions": ["activeTab", "scripting", "storage", "notifications"],
   "host_permissions": [
     "http://localhost:11434/*",
     "https://api.notion.com/*"
@@ -19,5 +19,8 @@
       "16": "icons/icon16.png",
       "48": "icons/icon48.png"
     }
+  },
+  "background": {
+    "service_worker": "background.js"
   }
 }
