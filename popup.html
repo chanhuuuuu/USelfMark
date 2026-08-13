@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <style>
-    body { width: 320px; font-family: sans-serif; padding: 15px; background: #f4f7f6; }
-    .card { background: white; padding: 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    h3 { margin-top: 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
-    input { width: 100%; margin-top: 8px; padding: 8px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; }
-    button { width: 100%; padding: 10px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px; transition: 0.3s; }
-    #saveBtn { background: #5c67f2; color: white; }
-    #saveBtn:hover { background: #4a54e1; }
-    #configBtn { background: #f0f0f0; color: #666; font-size: 12px; }
-    #status { margin-top: 12px; font-size: 12px; color: #555; line-height: 1.5; white-space: pre-wrap; background: #fff9db; padding: 5px; border-radius: 4px; display: none; }
-    .hidden { display: none; }
-    .label { font-size: 11px; color: #999; margin-top: 8px; }
-  </style>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 320px;
+            padding: 15px;
+            font-family: sans-serif;
+            background: #f4f7f6;
+            margin: 0;
+        }
+        .card {
+            text-align: center;
+        }
+        h3 {
+            margin-top: 0;
+            color: #222;
+        }
+        #clipBtn {
+            padding: 8px 16px;
+            cursor: pointer;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        #clipBtn:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+        }
+        #status {
+            margin-top: 12px;
+            font-size: 12px;
+            color: #555;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            padding: 5px;
+            background: #fff9db;
+            border-radius: 4px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <h3>USelfMark 本地AI整理</h3>
-    
-    <div id="main-ui">
-      <button id="saveBtn">🚀 智能归档到 Notion</button>
-      <button id="configBtn">⚙️ 设置参数 (Ollama/Notion)</button>
+    <div class="card">
+        <h3>USelfMark 本地AI整理</h3>
+        <button id="clipBtn">📌 剪藏当前页面到Notion</button>
+        <div id="status"></div>
     </div>
-    <div id="config-ui" class="hidden">
-      <div class="label">Ollama 模型名 (llava:latest / gemma3:latest):</div>
-      <input type="text" id="modelName" placeholder="llava:latest">
-      <div class="label">Notion Token:</div>
-      <input type="password" id="notionToken" placeholder="secret_xxxxxx">
-      <div class="label">Notion Database ID:</div>
-      <input type="text" id="notionDb" placeholder="32位字符ID">
-      <button id="backBtn" style="background:#2ecc71; color:white;">保存并返回</button>
-    </div>
-    <div id="status"></div>
-  </div>
-  <script src="popup.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
